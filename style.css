@@ -21,6 +21,15 @@ body{
     font-size: 1em;
 }
 
+body > div{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
 img, picture, video, canvas, svg{
     display: block;
     max-width: 100%;
@@ -41,6 +50,7 @@ p, h1, h2, h3, h4, h5, h6{
     grid-template-rows: repeat(3, 1fr);
     aspect-ratio: 1/1;
     box-shadow: 0px 0px 10px 3px whitesmoke;
+    user-select: none;
 }
 
 .cell{
@@ -54,4 +64,138 @@ p, h1, h2, h3, h4, h5, h6{
 
 .cell:hover{
     background-color: whitesmoke;
+}
+
+#play-form{
+    background-color: white;
+    border: 1px solid rgb(223, 223, 223);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(300px, 50%, 400px);
+    padding: 2rem;
+    z-index: 2;
+    transition: all .3s ease;
+}
+
+#play-form div, #play-form p, label:not(.radio){
+    margin-bottom: 15px;
+}
+
+input:not(input[type="radio"], input[type="submit"]){
+    border: none;
+    outline: none;
+    background-color: rgb(248, 248, 248);
+    border-radius: 6px;
+    height: 2rem;
+    width: 100%;
+    padding: 0rem 1rem;
+    font-size: 1.1rem;
+}
+
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+    accent-color: rgb(0, 0, 0);
+}
+
+input[type="submit"]{
+    outline: none;
+    border: 1px solid rgb(223, 223, 223);
+    background-color: white;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+}
+
+label, #play-form p{
+    font-size: 1.2rem;
+}
+
+.radio{
+    font-weight: bold;
+}
+
+label:not(.radio){
+    display: block;
+}
+
+#book-read-yes{
+    margin-right: 25px;
+}
+
+#shadow{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+#play-again-form{
+    background-color: white;
+    border: 1px solid rgb(223, 223, 223);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(300px, 50%, 400px);
+    padding: 2rem;
+    z-index: 2;
+    transition: all .3s ease;
+}
+
+#play-again-form p.head{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#play-again-form p:not(p.head){
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+#play-again-form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#play-again-form button{
+    border: none;
+    outline: none;
+    background-color: rgb(248, 248, 248);
+    border-radius: 6px;
+    height: 2rem;
+    width: 100%;
+    padding: 0rem 1rem;
+    font-size: 1.1rem;
+    border: 1px solid rgb(223, 223, 223);
+    background-color: white;
+    cursor: pointer;
+}
+
+#restart{
+    background-color: white;
+    border: 1px solid rgb(223, 223, 223);
+    height: 2rem;
+    width: 100%;
+    padding: 0rem 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
 }

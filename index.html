@@ -5,18 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./main.js" defer></script>
 </head>
 <body>
-    <div id="grid-container">
-        <div class="cell">X</div>
-        <div class="cell">X</div>
-        <div class="cell">O</div>
-        <div class="cell">X</div>
-        <div class="cell">O</div>
-        <div class="cell">X</div>
-        <div class="cell">O</div>
-        <div class="cell">X</div>
-        <div class="cell">X</div>
+    <div>
+        <button id="restart" class="hidden">Restart</button>
+        <div id="grid-container">
+            <div class="cell" data-position="1"></div>
+            <div class="cell" data-position="2"></div>
+            <div class="cell" data-position="3"></div>
+            <div class="cell" data-position="4"></div>
+            <div class="cell" data-position="5"></div>
+            <div class="cell" data-position="6"></div>
+            <div class="cell" data-position="7"></div>
+            <div class="cell" data-position="8"></div>
+            <div class="cell" data-position="9"></div>
+        </div>
     </div>
+    <!-- absolute -->
+    <form action="" method="" class="hidden" id="play-form">
+        <div>
+            <label for="name">What's your name?</label>
+            <input type="text" name="" id="name">
+        </div>
+        <div>
+            <p>
+                Sign:
+            </p>
+            <label class="radio" for="x">X</label>
+            <input type="radio" name="sign" id="x">
+            <label class="radio" for="o">O</label>
+            <input type="radio" name="sign" id="o">
+        </div>
+        <input type="submit" value="Play">
+    </form>
+    <form action="" method="" class="hidden" id="play-again-form">
+        <p class="head">
+            <span id="message"></span>, <span id="player-name"></span>!
+        </p>
+        <p>
+            Do you want to play again?
+        </p>
+        <div>
+            <button id="yes-play-again">Yes</button>
+            <button id="no-play-again">No</button>
+        </div>
+    </form>
+    <div id="shadow" class="hidden"></div>
 </body>
 </html>
