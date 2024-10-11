@@ -47,8 +47,9 @@ p, h1, h2, h3, h4, h5, h6{
     width: clamp(400px, 50%, 550px);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    aspect-ratio: 1/1;
+    grid-template-rows: repeat(3, 130px);
+
+    /* aspect-ratio: 1/1; */
     box-shadow: 0px 0px 10px 3px whitesmoke;
     user-select: none;
 }
@@ -104,6 +105,7 @@ input[type="submit"]{
     outline: none;
     border: 1px solid rgb(223, 223, 223);
     background-color: white;
+    color: black;
     font-size: 1.2rem;
     padding: 1rem 2rem;
     border-radius: 6px;
@@ -197,5 +199,6 @@ label:not(.radio){
     width: 100%;
     padding: 0rem 1rem;
     font-size: 1.1rem;
+    width: min-content;
     cursor: pointer;
 }
